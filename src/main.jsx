@@ -62,12 +62,3 @@ const Layout = () => {
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(<Layout />);
-
-// Добавить более современную библиотеку для работы с canvas
-// https://www.npmjs.com/package/react-canvas-draw
-// https://www.npmjs.com/package/react-konva
-
-// Описание проекта: фронт отправляет изображение в Python при помощи Data URL
-// Бэк на Python создает из Data URL обьект изображения Python Image Library
-// Несколько функций преобразовывают обьект изображения в формат подходящий для модели
-// машинного обучения.
