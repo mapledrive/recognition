@@ -1,68 +1,135 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.App {
+  text-align: center;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+.App-logo {
+  height: 250px;
+  width: 250px;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #000;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+* {
+  box-sizing: border-box;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 5px 20px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  font-family: inherit; /* Inherit font family from body */
+  font-size: calc(10px + 2vmin);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out; /* Add smooth hover effect */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+button:hover {
+  color: grey;
+  border: 2px solid grey;
+}
+
+.controls {
+  display: flex;
+}
+
+.controls > *:not(:last-child) {
+  /* Target all children except the last one */
+  margin-right: 10px;
+}
+
+.message {
+  color: red;
+}
+
+.sketchWrapper {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 1px;
+  .canvas-container {
+    width: 200px !important;
   }
-  a:hover {
-    color: #747bff;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000;
+  width: 250px;
+  height: 250px;
+  position: relative; /* Make container relative for positioning */
+}
+
+.child1,
+.child2 {
+  position: absolute; /* Make child divs absolute for positioning */
+  top: 50%; /* Position at 50% height for vertical centering */
+  left: 50%; /* Position at 50% width for horizontal centering */
+  transform: translate(-50%, -50%); /* Offset to compensate for half width/height */
+  /* Style your child divs here */
+}
+
+/* .blob-1 {
+  width: 260px;
+  aspect-ratio: 1;
+  border: 10px solid #0000;
+  padding: 5px;
+  background: radial-gradient(farthest-side, #61dafb 98%, #0000) 0 0/20px 20px no-repeat,
+    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #61dafb 0) content-box,
+    conic-gradient(from -90deg at 220px 220px, #0000 90deg, #61dafb 0) content-box, #0000;
+  filter: blur(2px) contrast(80);
+  animation: b1 8s infinite;
+} */
+
+.blob-1 {
+  width: 250px;
+  aspect-ratio: 1;
+  border: 10px solid #0000;
+  padding: 5px;
+  background: radial-gradient(farthest-side, #61dafb 98%, #0000) 0 0/20px 20px no-repeat,
+    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #61dafb 0) content-box,
+    conic-gradient(from -90deg at 210px 210px, white 90deg, #61dafb 0) content-box, #2c2c2c;
+  filter: blur(4px) contrast(18);
+  animation: b1 8s infinite;
+}
+
+@keyframes b1 {
+  0% {
+    background-position: 0 0;
   }
-  button {
-    background-color: #f9f9f9;
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0;
   }
 }
