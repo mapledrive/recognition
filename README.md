@@ -1,8 +1,9 @@
-# React + Vite
+# Machine Learning Number Recognition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is a simple digit recognizer. The user is drawing a digit on canvas, and machine predicts the digit. Simplicity is essential because it allows us to see the big picture rather than focus on details.
 
-Currently, two official plugins are available:
+The frontend part is built with a Vite.js React, and deployed to github pages. The machine learning part uses Python for the back-end application and is deployed on cloud.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To keep things simple, I used the most popular and easy-to-reproduce technologies.
+
+The core part of that app is the k-nearest neighbors algorithm guessing the drawn number.
