@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,7 +18,7 @@ body {
 }
 
 .App-header {
-  background-color: #000;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -80,38 +81,28 @@ button:hover {
   background-color: #0000;
   width: 250px;
   height: 250px;
-  position: relative; /* Make container relative for positioning */
+  position: relative;
 }
 
 .child1,
 .child2 {
-  position: absolute; /* Make child divs absolute for positioning */
-  top: 50%; /* Position at 50% height for vertical centering */
-  left: 50%; /* Position at 50% width for horizontal centering */
-  transform: translate(-50%, -50%); /* Offset to compensate for half width/height */
-  /* Style your child divs here */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-/* .blob-1 {
-  width: 260px;
-  aspect-ratio: 1;
-  border: 10px solid #0000;
-  padding: 5px;
-  background: radial-gradient(farthest-side, #61dafb 98%, #0000) 0 0/20px 20px no-repeat,
-    conic-gradient(from 90deg at 10px 10px, #0000 90deg, #61dafb 0) content-box,
-    conic-gradient(from -90deg at 220px 220px, #0000 90deg, #61dafb 0) content-box, #0000;
-  filter: blur(2px) contrast(80);
-  animation: b1 8s infinite;
-} */
 
 .blob-1 {
   width: 250px;
   aspect-ratio: 1;
   border: 10px solid #0000;
   padding: 5px;
-  background: radial-gradient(farthest-side, #61dafb 98%, #0000) 0 0/20px 20px no-repeat,
+  background: radial-gradient(farthest-side, #61dafb 98%, #0000) 0 0/20px 20px
+      no-repeat,
     conic-gradient(from 90deg at 10px 10px, #0000 90deg, #61dafb 0) content-box,
-    conic-gradient(from -90deg at 210px 210px, white 90deg, #61dafb 0) content-box, #2c2c2c;
+    conic-gradient(from -90deg at 210px 210px, white 90deg, #61dafb 0)
+      content-box,
+    #2c2c2c;
   filter: blur(4px) contrast(18);
   animation: b1 8s infinite;
 }

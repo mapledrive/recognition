@@ -29,7 +29,7 @@ const Layout = () => {
     setError(undefined);
   };
 
-  const handleClear = e => {
+  const handleClear = () => {
     sketchRef.current.clear();
     setPrediction('');
   };

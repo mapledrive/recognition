@@ -9,8 +9,7 @@ export default defineConfig({
     open: true,
     port: 3000,
     proxy: {
-      '/process': 'https://realmonte.pythonanywhere.com/process', // Ensure the full path is included
-      '/test': 'https://realmonte.pythonanywhere.com/test',
+      '/process': 'https://realmonte.pythonanywhere.com/process',
     },
   },
 });
