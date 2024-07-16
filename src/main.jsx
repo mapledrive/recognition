@@ -6,10 +6,10 @@ import './index.css';
 // Function to retrieve base URL based on environment
 export const getBaseUrl = () => {
   if (import.meta.env.MODE === 'production') {
-    console.log('We are in production environment now ', import.meta.env.BASE_URL);
+    console.log('We are in production environment now');
     return 'https://realmonte.pythonanywhere.com';
   } else {
-    console.log('We are in development environment now ', import.meta.env.BASE_URL);
+    console.log('We are in development environment now');
     return 'http://127.0.0.1:5000';
   }
 };
